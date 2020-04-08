@@ -1,4 +1,18 @@
 set encoding=UTF-8
+set guifont=DejaVu\ Sans:s12
+
+
+filetype plugin indent on
+" On pressing tab, insert 2 spaces
+set expandtab
+" show existing tab with 2 spaces width
+set tabstop=2
+set softtabstop=2
+" when indenting with '>', use 2 spaces width
+set shiftwidth=2
+
+"saving file in insert mode
+inoremap <F3> <c-o>:w<cr>
 
 " Plugins will be downloaded under the specified directory.
 call plug#begin('~/.vim/plugged')
@@ -9,6 +23,8 @@ Plug 'preservim/nerdtree'
 Plug 'junegunn/fzf.vim'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
+"To show branch on the airline status line
+Plug 'tpope/vim-fugitive'
 Plug 'sainnhe/sonokai'
 " important!!
 set termguicolors
@@ -21,6 +37,7 @@ let g:sonokai_disable_italic_comment = 1
 colorscheme sonokai
 """"""""""""""""""""""""""""""""""""""
 Plug 'jiangmiao/auto-pairs'
+Plug 'gorodinskiy/vim-coloresque'
 Plug 'preservim/nerdcommenter'
 Plug 'ryanoasis/vim-devicons'
 Plug 'jiangmiao/auto-pairs'
@@ -67,6 +84,7 @@ endif
 "Airline 
 let g:airline#extensions#tabline#formatter = 'default'
 let g:airline_powerline_fonts = 1
+let g:Powerline_Symbols = "fancy"
 
 if !exists('g:airline_symbols')
     let g:airline_symbols = {}
@@ -142,6 +160,7 @@ set shortmess+=c
 " Always show the signcolumn, otherwise it would shift the text each time
 " diagnostics appear/become resolved.
 set signcolumn=yes
+
 
 " Use tab for trigger completion with characters ahead and navigate.
 " NOTE: Use command ':verbose imap <tab>' to make sure tab is not mapped by
