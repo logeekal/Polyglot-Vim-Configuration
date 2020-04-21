@@ -1,0 +1,4 @@
+tsserver.executeAutofix
+tsserver.openTsServerLog
+tsserver.reloadProjects
+tsserver.restart

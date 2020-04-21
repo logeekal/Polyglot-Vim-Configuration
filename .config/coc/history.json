@@ -1,0 +1,12 @@
+{
+  "diagnostics": {
+    "%2Froot%2Fprojects%2Fphoto_card": [
+      "s "
+    ]
+  },
+  "commands": {
+    "%2Froot%2Fprojects%2Fgraph_vis": [
+      "on"
+    ]
+  }
+}
